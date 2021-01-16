@@ -1,7 +1,7 @@
 circle = []
 fuel = []
 
-for petrol_station in range(int(input())):
+for _ in range(int(input())):
     gas, distance = input().split()
     fuel.append(int(gas))
     circle.append(int(distance))
