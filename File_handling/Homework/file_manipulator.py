@@ -11,13 +11,15 @@ while not command == "End":
             file.write(f"{operation[2]}\n")
     elif operation[0] == "Replace":
         try:
-            with open(operation[1], "a") as file:
-                file.write(f"{operation[2]}\n")
+            with open(operation[1], "r+") as file:
+                text = "".join(file.readlines())
+                replaced_content = text.replace(operation[2], operation[3])
+                file.seek(0)
+                file.write(replaced_content)
         except FileNotFoundError:
             print("An error occurred")
     elif operation[0] == "Delete":
-        os.remove(command[1])
+        os.remove(operation[1])
 
     command = input()
 
-# the command with REPLACE is not OK

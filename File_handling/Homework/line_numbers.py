@@ -39,6 +39,6 @@ text = read_and_extract("text2.txt")
 count_chars(text, output)
 add_line_nums(output, result)
 
-with open("output.txt", "w") as file:
+with open("../output.txt", "w") as file:
     for line in result:
         file.writelines(f"{line}\n")
