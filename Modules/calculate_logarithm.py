@@ -6,6 +6,3 @@ if base == "natural":
     print(f"{log(num):.2f}")
 else:
     print(f"{log(num, float(base)):.2f}")
-
-
-
