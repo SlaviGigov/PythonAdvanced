@@ -62,7 +62,7 @@ def get_next_move(positions, dir):
     return row_index + delta[0], column_index + delta[1]
 
 
-def is_win(lair, plair):
+def is_win(lair, player):
     (row_index, column_index) = player
     return not in_range(row_index, len(lair)) or not in_range(column_index, len(lair[0]))
 
